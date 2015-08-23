@@ -12,8 +12,8 @@
 		0CB6EA681B88FBCD002F514F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CB6EA671B88FBCD002F514F /* Images.xcassets */; };
 		0CB6EA6B1B88FBCD002F514F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CB6EA691B88FBCD002F514F /* LaunchScreen.xib */; };
 		0CB6EA771B88FBCD002F514F /* PeggyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB6EA761B88FBCD002F514F /* PeggyTests.swift */; };
-		0CB6EA821B891492002F514F /* Component in Resources */ = {isa = PBXBuildFile; fileRef = 0CB6EA801B891492002F514F /* Component */; };
-		0CB6EA831B891492002F514F /* Service in Resources */ = {isa = PBXBuildFile; fileRef = 0CB6EA811B891492002F514F /* Service */; };
+		0CB6EAA61B89A808002F514F /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB6EAA21B89A808002F514F /* ContactsViewController.swift */; };
+		0CB6EAA71B89A808002F514F /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB6EAA41B89A808002F514F /* DashboardViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +36,8 @@
 		0CB6EA701B88FBCD002F514F /* PeggyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeggyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CB6EA751B88FBCD002F514F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CB6EA761B88FBCD002F514F /* PeggyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeggyTests.swift; sourceTree = "<group>"; };
-		0CB6EA801B891492002F514F /* Component */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Component; sourceTree = "<group>"; };
-		0CB6EA811B891492002F514F /* Service */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Service; sourceTree = "<group>"; };
+		0CB6EAA21B89A808002F514F /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		0CB6EAA41B89A808002F514F /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +79,13 @@
 		0CB6EA5B1B88FBCD002F514F /* Peggy */ = {
 			isa = PBXGroup;
 			children = (
-				0CB6EA801B891492002F514F /* Component */,
-				0CB6EA811B891492002F514F /* Service */,
+				0CB6EAA01B89A808002F514F /* Component */,
+				0CB6EAA51B89A808002F514F /* Service */,
+				0CB6EA5C1B88FBCD002F514F /* Supporting Files */,
 				0CB6EA5E1B88FBCD002F514F /* AppDelegate.swift */,
-				0CB6EA641B88FBCD002F514F /* Main.storyboard */,
 				0CB6EA671B88FBCD002F514F /* Images.xcassets */,
 				0CB6EA691B88FBCD002F514F /* LaunchScreen.xib */,
-				0CB6EA5C1B88FBCD002F514F /* Supporting Files */,
+				0CB6EA641B88FBCD002F514F /* Main.storyboard */,
 			);
 			path = Peggy;
 			sourceTree = "<group>";
@@ -113,6 +113,38 @@
 				0CB6EA751B88FBCD002F514F /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0CB6EAA01B89A808002F514F /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				0CB6EAA11B89A808002F514F /* Contacts */,
+				0CB6EAA31B89A808002F514F /* Dashboard */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		0CB6EAA11B89A808002F514F /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				0CB6EAA21B89A808002F514F /* ContactsViewController.swift */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		0CB6EAA31B89A808002F514F /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				0CB6EAA41B89A808002F514F /* DashboardViewController.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		0CB6EAA51B89A808002F514F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,11 +227,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CB6EA821B891492002F514F /* Component in Resources */,
 				0CB6EA661B88FBCD002F514F /* Main.storyboard in Resources */,
 				0CB6EA6B1B88FBCD002F514F /* LaunchScreen.xib in Resources */,
 				0CB6EA681B88FBCD002F514F /* Images.xcassets in Resources */,
-				0CB6EA831B891492002F514F /* Service in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +248,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CB6EA5F1B88FBCD002F514F /* AppDelegate.swift in Sources */,
+				0CB6EAA71B89A808002F514F /* DashboardViewController.swift in Sources */,
+				0CB6EAA61B89A808002F514F /* ContactsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +445,7 @@
 				0CB6EA7C1B88FBCD002F514F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0CB6EA7D1B88FBCD002F514F /* Build configuration list for PBXNativeTarget "PeggyTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +454,7 @@
 				0CB6EA7F1B88FBCD002F514F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
