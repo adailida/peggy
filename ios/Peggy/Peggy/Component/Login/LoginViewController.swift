@@ -28,4 +28,9 @@ class LoginViewController: UIViewController {
         })
     }
     
+    @IBAction func loginWithoutSigningIn(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: { () -> Void in
+            
+        })
+    }
 }

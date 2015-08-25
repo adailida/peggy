@@ -16,6 +16,8 @@
 		0CB6EAB91B89ABE8002F514F /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB6EAB41B89ABE8002F514F /* DashboardViewController.swift */; };
 		0CB6EABA1B89ABE8002F514F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB6EAB61B89ABE8002F514F /* LoginViewController.swift */; };
 		0CB6EABC1B89ABFB002F514F /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CB6EABB1B89ABFB002F514F /* LoginView.xib */; };
+		0CBD950B1B8C354B009CA68E /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBD950A1B8C354B009CA68E /* Contact.swift */; };
+		0CBD950D1B8C372F009CA68E /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBD950C1B8C372F009CA68E /* DateExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		0CB6EAB41B89ABE8002F514F /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		0CB6EAB61B89ABE8002F514F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0CB6EABB1B89ABFB002F514F /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		0CBD950A1B8C354B009CA68E /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		0CBD950C1B8C372F009CA68E /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 		0CB6EA5B1B88FBCD002F514F /* Peggy */ = {
 			isa = PBXGroup;
 			children = (
+				0CBD95091B8C352E009CA68E /* Model */,
 				0CB6EAB01B89ABE8002F514F /* Component */,
 				0CB6EAB71B89ABE8002F514F /* Service */,
 				0CB6EA5C1B88FBCD002F514F /* Supporting Files */,
@@ -159,6 +164,15 @@
 			children = (
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		0CBD95091B8C352E009CA68E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0CBD950A1B8C354B009CA68E /* Contact.swift */,
+				0CBD950C1B8C372F009CA68E /* DateExtension.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,8 +279,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CB6EABA1B89ABE8002F514F /* LoginViewController.swift in Sources */,
+				0CBD950D1B8C372F009CA68E /* DateExtension.swift in Sources */,
 				0CB6EA5F1B88FBCD002F514F /* AppDelegate.swift in Sources */,
 				0CB6EAB91B89ABE8002F514F /* DashboardViewController.swift in Sources */,
+				0CBD950B1B8C354B009CA68E /* Contact.swift in Sources */,
 				0CB6EAB81B89ABE8002F514F /* ContactsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

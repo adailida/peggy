@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Peggy">
@@ -15,7 +16,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q5z-cu-7It">
-                    <rect key="frame" x="229" y="285" width="143" height="30"/>
+                    <rect key="frame" x="230" y="285" width="141" height="30"/>
                     <state key="normal" title="Login with Facebook">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -23,11 +24,31 @@
                         <action selector="loginWithFacebook:" destination="-1" eventType="touchUpInside" id="LHS-gr-Alr"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPU-qJ-xvF">
+                    <rect key="frame" x="201" y="347" width="199" height="30"/>
+                    <state key="normal" title="Use Peggy without signing in"/>
+                    <connections>
+                        <action selector="loginWithoutSigningIn:" destination="-1" eventType="touchUpInside" id="LyW-9r-00x"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82E-pP-dMu">
+                    <rect key="frame" x="0.0" y="154" width="600" height="41"/>
+                    <string key="text">Welcome to Peggy!
+Never forget to get a gift again</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="q5z-cu-7It" firstAttribute="top" secondItem="82E-pP-dMu" secondAttribute="bottom" constant="90" id="0Ce-Mg-tpI"/>
                 <constraint firstAttribute="centerY" secondItem="q5z-cu-7It" secondAttribute="centerY" id="Lph-c3-pH1"/>
+                <constraint firstItem="82E-pP-dMu" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Pas-sC-MF7"/>
+                <constraint firstItem="DPU-qJ-xvF" firstAttribute="centerX" secondItem="q5z-cu-7It" secondAttribute="centerX" id="Wnw-w8-jFC"/>
                 <constraint firstAttribute="centerX" secondItem="q5z-cu-7It" secondAttribute="centerX" id="jfy-Wp-umq"/>
+                <constraint firstItem="DPU-qJ-xvF" firstAttribute="top" secondItem="q5z-cu-7It" secondAttribute="bottom" constant="32" id="kTD-Ji-ibE"/>
+                <constraint firstItem="82E-pP-dMu" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="obU-4D-NEr"/>
             </constraints>
         </view>
     </objects>
