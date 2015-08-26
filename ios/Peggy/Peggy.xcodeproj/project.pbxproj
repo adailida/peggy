@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C60A58C1B8D84F200A76879 /* UpcomingEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C60A58B1B8D84F200A76879 /* UpcomingEvent.swift */; };
+		0C60A58E1B8D88F900A76879 /* Recommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C60A58D1B8D88F900A76879 /* Recommendation.swift */; };
 		0CB6EA5F1B88FBCD002F514F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB6EA5E1B88FBCD002F514F /* AppDelegate.swift */; };
 		0CB6EA661B88FBCD002F514F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CB6EA641B88FBCD002F514F /* Main.storyboard */; };
 		0CB6EA681B88FBCD002F514F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CB6EA671B88FBCD002F514F /* Images.xcassets */; };
@@ -31,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C60A58B1B8D84F200A76879 /* UpcomingEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpcomingEvent.swift; sourceTree = "<group>"; };
+		0C60A58D1B8D88F900A76879 /* Recommendation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recommendation.swift; sourceTree = "<group>"; };
 		0CB6EA591B88FBCD002F514F /* Peggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Peggy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CB6EA5D1B88FBCD002F514F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CB6EA5E1B88FBCD002F514F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,9 +91,9 @@
 		0CB6EA5B1B88FBCD002F514F /* Peggy */ = {
 			isa = PBXGroup;
 			children = (
+				0CB6EAB71B89ABE8002F514F /* Service */,
 				0CBD95091B8C352E009CA68E /* Model */,
 				0CB6EAB01B89ABE8002F514F /* Component */,
-				0CB6EAB71B89ABE8002F514F /* Service */,
 				0CB6EA5C1B88FBCD002F514F /* Supporting Files */,
 				0CB6EA5E1B88FBCD002F514F /* AppDelegate.swift */,
 				0CB6EA671B88FBCD002F514F /* Images.xcassets */,
@@ -171,6 +175,8 @@
 			children = (
 				0CBD950A1B8C354B009CA68E /* Contact.swift */,
 				0CBD950C1B8C372F009CA68E /* DateExtension.swift */,
+				0C60A58B1B8D84F200A76879 /* UpcomingEvent.swift */,
+				0C60A58D1B8D88F900A76879 /* Recommendation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -282,6 +288,8 @@
 				0CBD950D1B8C372F009CA68E /* DateExtension.swift in Sources */,
 				0CB6EA5F1B88FBCD002F514F /* AppDelegate.swift in Sources */,
 				0CB6EAB91B89ABE8002F514F /* DashboardViewController.swift in Sources */,
+				0C60A58E1B8D88F900A76879 /* Recommendation.swift in Sources */,
+				0C60A58C1B8D84F200A76879 /* UpcomingEvent.swift in Sources */,
 				0CBD950B1B8C354B009CA68E /* Contact.swift in Sources */,
 				0CB6EAB81B89ABE8002F514F /* ContactsViewController.swift in Sources */,
 			);
