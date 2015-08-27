@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ContactsViewController: UITableViewController {
+class ContactsViewController: UIViewController, UITableViewDataSource {
+    
+    @IBOutlet weak var contactsTableView: UITableView!
     
     private let dateFormatter = NSDateFormatter()
     
@@ -19,6 +21,7 @@ class ContactsViewController: UITableViewController {
 
     override func viewDidLoad() {
         self.dateFormatter.dateStyle = NSDateFormatterStyle.LongStyle
+        self.contactsTableView.dataSource = self
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -28,26 +31,17 @@ class ContactsViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return datasource.count
     }
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ContactCell")!
         let contact = self.datasource[indexPath.row]
         let date = contact.dob != nil ? self.dateFormatter.stringFromDate(contact.dob!) : ""
         cell.textLabel?.text = "\(contact.name) \(contact.surname) \(date)"
         return cell
     }
-    
-    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 20
-    }
-
 
 }
 
