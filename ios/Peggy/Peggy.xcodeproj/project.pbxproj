@@ -10,6 +10,9 @@
 		0C50E8DE1B8ED10400DD2CEB /* GiftIdeasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C50E8DD1B8ED10400DD2CEB /* GiftIdeasViewController.swift */; };
 		0C50E8E01B8ED23B00DD2CEB /* GiftIdea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C50E8DF1B8ED23B00DD2CEB /* GiftIdea.swift */; };
 		0C50E8E21B8ED39300DD2CEB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C50E8E11B8ED39300DD2CEB /* Constants.swift */; };
+		0C50E8E41B8ED8F100DD2CEB /* ContactDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C50E8E31B8ED8F100DD2CEB /* ContactDetailsViewController.swift */; };
+		0C50E8E61B8ED92D00DD2CEB /* ContactDetailsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C50E8E51B8ED92D00DD2CEB /* ContactDetailsView.xib */; };
+		0C50E8E81B8ED99B00DD2CEB /* ContactTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C50E8E71B8ED99B00DD2CEB /* ContactTableCell.swift */; };
 		0C60A58C1B8D84F200A76879 /* UpcomingEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C60A58B1B8D84F200A76879 /* UpcomingEvent.swift */; };
 		0C60A58E1B8D88F900A76879 /* Recommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C60A58D1B8D88F900A76879 /* Recommendation.swift */; };
 		0CB6EA5F1B88FBCD002F514F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB6EA5E1B88FBCD002F514F /* AppDelegate.swift */; };
@@ -39,6 +42,9 @@
 		0C50E8DD1B8ED10400DD2CEB /* GiftIdeasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftIdeasViewController.swift; sourceTree = "<group>"; };
 		0C50E8DF1B8ED23B00DD2CEB /* GiftIdea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftIdea.swift; sourceTree = "<group>"; };
 		0C50E8E11B8ED39300DD2CEB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0C50E8E31B8ED8F100DD2CEB /* ContactDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailsViewController.swift; sourceTree = "<group>"; };
+		0C50E8E51B8ED92D00DD2CEB /* ContactDetailsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactDetailsView.xib; sourceTree = "<group>"; };
+		0C50E8E71B8ED99B00DD2CEB /* ContactTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableCell.swift; sourceTree = "<group>"; };
 		0C60A58B1B8D84F200A76879 /* UpcomingEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpcomingEvent.swift; sourceTree = "<group>"; };
 		0C60A58D1B8D88F900A76879 /* Recommendation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recommendation.swift; sourceTree = "<group>"; };
 		0CB6EA591B88FBCD002F514F /* Peggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Peggy.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,7 +162,10 @@
 		0CB6EAB11B89ABE8002F514F /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
+				0C50E8E51B8ED92D00DD2CEB /* ContactDetailsView.xib */,
+				0C50E8E31B8ED8F100DD2CEB /* ContactDetailsViewController.swift */,
 				0CB6EAB21B89ABE8002F514F /* ContactsViewController.swift */,
+				0C50E8E71B8ED99B00DD2CEB /* ContactTableCell.swift */,
 			);
 			path = Contacts;
 			sourceTree = "<group>";
@@ -191,9 +200,9 @@
 			children = (
 				0CBD950A1B8C354B009CA68E /* Contact.swift */,
 				0CBD950C1B8C372F009CA68E /* DateExtension.swift */,
-				0C60A58B1B8D84F200A76879 /* UpcomingEvent.swift */,
-				0C60A58D1B8D88F900A76879 /* Recommendation.swift */,
 				0C50E8DF1B8ED23B00DD2CEB /* GiftIdea.swift */,
+				0C60A58D1B8D88F900A76879 /* Recommendation.swift */,
+				0C60A58B1B8D84F200A76879 /* UpcomingEvent.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -283,6 +292,7 @@
 				0CB6EA661B88FBCD002F514F /* Main.storyboard in Resources */,
 				0CB6EA6B1B88FBCD002F514F /* LaunchScreen.xib in Resources */,
 				0CB6EABC1B89ABFB002F514F /* LoginView.xib in Resources */,
+				0C50E8E61B8ED92D00DD2CEB /* ContactDetailsView.xib in Resources */,
 				0CB6EA681B88FBCD002F514F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,9 +313,11 @@
 			files = (
 				0CB6EABA1B89ABE8002F514F /* LoginViewController.swift in Sources */,
 				0C50E8E21B8ED39300DD2CEB /* Constants.swift in Sources */,
+				0C50E8E41B8ED8F100DD2CEB /* ContactDetailsViewController.swift in Sources */,
 				0CBD950D1B8C372F009CA68E /* DateExtension.swift in Sources */,
 				0CB6EA5F1B88FBCD002F514F /* AppDelegate.swift in Sources */,
 				0CB6EAB91B89ABE8002F514F /* DashboardViewController.swift in Sources */,
+				0C50E8E81B8ED99B00DD2CEB /* ContactTableCell.swift in Sources */,
 				0C60A58E1B8D88F900A76879 /* Recommendation.swift in Sources */,
 				0C50E8DE1B8ED10400DD2CEB /* GiftIdeasViewController.swift in Sources */,
 				0C50E8E01B8ED23B00DD2CEB /* GiftIdea.swift in Sources */,

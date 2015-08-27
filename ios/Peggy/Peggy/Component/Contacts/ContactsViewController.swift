@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ContactsViewController: UIViewController, UITableViewDataSource {
+class ContactsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var contactsTableView: UITableView!
     
@@ -22,6 +22,7 @@ class ContactsViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         self.dateFormatter.dateStyle = NSDateFormatterStyle.LongStyle
         self.contactsTableView.dataSource = self
+        self.contactsTableView.delegate = self
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -42,6 +43,13 @@ class ContactsViewController: UIViewController, UITableViewDataSource {
         cell.textLabel?.text = "\(contact.name) \(contact.surname) \(date)"
         return cell
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let contact = self.datasource[indexPath.row]
+        self.presentViewController(ContactDetailsViewController(contact: contact), animated: true, completion: nil)
+    }
+    
+    
 
 }
 
