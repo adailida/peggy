@@ -10,18 +10,13 @@ import UIKit
 
 class ContactDetailsViewController: UIViewController {
     
-    var contact: Contact
+    var contact: Contact?
     
-    init(contact: Contact) {
-        self.contact = contact
-        super.init(nibName: "ContactDetailsView", bundle: nil)
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.nameLabel.text = contact?.name
     }
     
-    @IBAction func done(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
 }

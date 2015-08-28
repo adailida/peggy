@@ -32,6 +32,16 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return datasource.count
     }
@@ -44,11 +54,14 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let contact = self.datasource[indexPath.row]
-        self.presentViewController(ContactDetailsViewController(contact: contact), animated: true, completion: nil)
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ContactDetailsSegue" {
+            if let detailsController = segue.destinationViewController as? ContactDetailsViewController,
+            let indexPath = self.contactsTableView.indexPathForSelectedRow {
+                detailsController.contact = self.datasource[indexPath.row]
+            }
+        }
     }
-    
     
 
 }
