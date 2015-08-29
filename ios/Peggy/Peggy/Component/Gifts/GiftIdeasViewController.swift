@@ -8,9 +8,9 @@
 
 import UIKit
 
-class GiftIdeasViewController: UIViewController, UITableViewDataSource {
+class GiftIdeasViewController: HideNavBarViewController, UICollectionViewDataSource {
     
-    @IBOutlet weak var giftIdeasTableView: UITableView!
+    @IBOutlet weak var giftIdeasCollectionView: UICollectionView!
     
     private var datasource: [GiftIdea] = [
         GiftIdea(name: "idea1"),
@@ -18,7 +18,6 @@ class GiftIdeasViewController: UIViewController, UITableViewDataSource {
     ]
     
     override func viewDidLoad() {
-        self.giftIdeasTableView.dataSource = self
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -28,15 +27,15 @@ class GiftIdeasViewController: UIViewController, UITableViewDataSource {
         // Dispose of any resources that can be recreated.
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return datasource.count
     }
     
-     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("GiftIdeaCell")!
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("GiftIdeaCell", forIndexPath: indexPath) as! GiftIdeaCell
         let idea = self.datasource[indexPath.row]
-        cell.textLabel?.text = idea.name
+        cell.idea = idea
         return cell
     }
-
+    
 }

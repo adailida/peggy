@@ -8,8 +8,7 @@
 
 import Foundation
 
-
-struct UpcomingEvent {
+struct Event {
     
     var description: String
     

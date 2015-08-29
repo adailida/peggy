@@ -12,8 +12,11 @@
 		0C50E8E21B8ED39300DD2CEB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C50E8E11B8ED39300DD2CEB /* Constants.swift */; };
 		0C50E8E41B8ED8F100DD2CEB /* ContactDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C50E8E31B8ED8F100DD2CEB /* ContactDetailsViewController.swift */; };
 		0C50E8E81B8ED99B00DD2CEB /* ContactTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C50E8E71B8ED99B00DD2CEB /* ContactTableCell.swift */; };
-		0C60A58C1B8D84F200A76879 /* UpcomingEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C60A58B1B8D84F200A76879 /* UpcomingEvent.swift */; };
+		0C60A58C1B8D84F200A76879 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C60A58B1B8D84F200A76879 /* Event.swift */; };
 		0C60A58E1B8D88F900A76879 /* Recommendation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C60A58D1B8D88F900A76879 /* Recommendation.swift */; };
+		0C6365421B91922400DBFDCF /* HideNavBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6365411B91922400DBFDCF /* HideNavBarViewController.swift */; };
+		0C6365441B91930300DBFDCF /* EventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6365431B91930300DBFDCF /* EventDetailsViewController.swift */; };
+		0C9BC3E31B91982700BFD46D /* GiftIdeaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9BC3E21B91982700BFD46D /* GiftIdeaCell.swift */; };
 		0CB6EA5F1B88FBCD002F514F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB6EA5E1B88FBCD002F514F /* AppDelegate.swift */; };
 		0CB6EA661B88FBCD002F514F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CB6EA641B88FBCD002F514F /* Main.storyboard */; };
 		0CB6EA681B88FBCD002F514F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CB6EA671B88FBCD002F514F /* Images.xcassets */; };
@@ -43,8 +46,11 @@
 		0C50E8E11B8ED39300DD2CEB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0C50E8E31B8ED8F100DD2CEB /* ContactDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailsViewController.swift; sourceTree = "<group>"; };
 		0C50E8E71B8ED99B00DD2CEB /* ContactTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableCell.swift; sourceTree = "<group>"; };
-		0C60A58B1B8D84F200A76879 /* UpcomingEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpcomingEvent.swift; sourceTree = "<group>"; };
+		0C60A58B1B8D84F200A76879 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		0C60A58D1B8D88F900A76879 /* Recommendation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recommendation.swift; sourceTree = "<group>"; };
+		0C6365411B91922400DBFDCF /* HideNavBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HideNavBarViewController.swift; sourceTree = "<group>"; };
+		0C6365431B91930300DBFDCF /* EventDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailsViewController.swift; sourceTree = "<group>"; };
+		0C9BC3E21B91982700BFD46D /* GiftIdeaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftIdeaCell.swift; sourceTree = "<group>"; };
 		0CB6EA591B88FBCD002F514F /* Peggy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Peggy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CB6EA5D1B88FBCD002F514F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CB6EA5E1B88FBCD002F514F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,8 +90,17 @@
 			isa = PBXGroup;
 			children = (
 				0C50E8DD1B8ED10400DD2CEB /* GiftIdeasViewController.swift */,
+				0C9BC3E21B91982700BFD46D /* GiftIdeaCell.swift */,
 			);
 			path = Gifts;
+			sourceTree = "<group>";
+		};
+		0C6365401B9191F700DBFDCF /* Generic */ = {
+			isa = PBXGroup;
+			children = (
+				0C6365411B91922400DBFDCF /* HideNavBarViewController.swift */,
+			);
+			path = Generic;
 			sourceTree = "<group>";
 		};
 		0CB6EA501B88FBCD002F514F = {
@@ -149,6 +164,7 @@
 		0CB6EAB01B89ABE8002F514F /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				0C6365401B9191F700DBFDCF /* Generic */,
 				0C50E8DC1B8ED0D900DD2CEB /* Gifts */,
 				0CB6EAB11B89ABE8002F514F /* Contacts */,
 				0CB6EAB31B89ABE8002F514F /* Dashboard */,
@@ -171,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				0CB6EAB41B89ABE8002F514F /* DashboardViewController.swift */,
+				0C6365431B91930300DBFDCF /* EventDetailsViewController.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -199,7 +216,7 @@
 				0CBD950C1B8C372F009CA68E /* DateExtension.swift */,
 				0C50E8DF1B8ED23B00DD2CEB /* GiftIdea.swift */,
 				0C60A58D1B8D88F900A76879 /* Recommendation.swift */,
-				0C60A58B1B8D84F200A76879 /* UpcomingEvent.swift */,
+				0C60A58B1B8D84F200A76879 /* Event.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -313,11 +330,14 @@
 				0CBD950D1B8C372F009CA68E /* DateExtension.swift in Sources */,
 				0CB6EA5F1B88FBCD002F514F /* AppDelegate.swift in Sources */,
 				0CB6EAB91B89ABE8002F514F /* DashboardViewController.swift in Sources */,
+				0C6365441B91930300DBFDCF /* EventDetailsViewController.swift in Sources */,
 				0C50E8E81B8ED99B00DD2CEB /* ContactTableCell.swift in Sources */,
 				0C60A58E1B8D88F900A76879 /* Recommendation.swift in Sources */,
+				0C6365421B91922400DBFDCF /* HideNavBarViewController.swift in Sources */,
+				0C9BC3E31B91982700BFD46D /* GiftIdeaCell.swift in Sources */,
 				0C50E8DE1B8ED10400DD2CEB /* GiftIdeasViewController.swift in Sources */,
 				0C50E8E01B8ED23B00DD2CEB /* GiftIdea.swift in Sources */,
-				0C60A58C1B8D84F200A76879 /* UpcomingEvent.swift in Sources */,
+				0C60A58C1B8D84F200A76879 /* Event.swift in Sources */,
 				0CBD950B1B8C354B009CA68E /* Contact.swift in Sources */,
 				0CB6EAB81B89ABE8002F514F /* ContactsViewController.swift in Sources */,
 			);
