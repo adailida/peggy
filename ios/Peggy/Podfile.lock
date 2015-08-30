@@ -1,0 +1,10 @@
+PODS:
+  - Swiftstraints (1.1.0)
+
+DEPENDENCIES:
+  - Swiftstraints (~> 1.1.0)
+
+SPEC CHECKSUMS:
+  Swiftstraints: 32f446abc4c4761b50b118ee0d7550135cc94acf
+
+COCOAPODS: 0.38.2
