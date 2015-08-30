@@ -7,18 +7,28 @@
 //
 
 import UIKit
+import CHTCollectionViewWaterfallLayout
 
-class GiftIdeasViewController: HideNavBarViewController, UICollectionViewDataSource {
+class GiftIdeasViewController: HideNavBarViewController, UICollectionViewDataSource, CHTCollectionViewDelegateWaterfallLayout {
     
     @IBOutlet weak var giftIdeasCollectionView: UICollectionView!
     
     private var datasource: [GiftIdea] = [
         GiftIdea(name: "idea1"),
-        GiftIdea(name: "idea2")
+        GiftIdea(name: "idea2"),
+        GiftIdea(name: "idea3"),
+        GiftIdea(name: "idea4"),
+        GiftIdea(name: "idea5"),
+        GiftIdea(name: "idea6"),
+        GiftIdea(name: "idea7"),
+        GiftIdea(name: "idea8"),
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let layout = CHTCollectionViewWaterfallLayout()
+        layout.columnCount = 2
+        self.giftIdeasCollectionView.setCollectionViewLayout(layout, animated: true)
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -36,6 +46,10 @@ class GiftIdeasViewController: HideNavBarViewController, UICollectionViewDataSou
         let idea = self.datasource[indexPath.row]
         cell.idea = idea
         return cell
+    }
+    
+    func collectionView(collectionView: UICollectionView!, layout collectionViewLayout: UICollectionViewLayout!, sizeForItemAtIndexPath indexPath: NSIndexPath!) -> CGSize {
+        return CGSize(width: 100, height: 100)
     }
     
 }
