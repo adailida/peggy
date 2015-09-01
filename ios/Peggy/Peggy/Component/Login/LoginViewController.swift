@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import FBSDKLoginKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
+    
+    @IBOutlet weak var loginWithFBButton: FBSDKLoginButton!
     
     init() {
         super.init(nibName: "LoginView", bundle: nil)
@@ -20,6 +23,14 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.loginWithFBButton.readPermissions = ["email","user_friends"]
+    }
+    
+    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+    }
+    
+    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
     }
 
     @IBAction func loginWithFacebook(sender: AnyObject) {
