@@ -29,6 +29,7 @@ class GiftIdeasViewController: HideNavBarViewController, UICollectionViewDataSou
         let layout = CHTCollectionViewWaterfallLayout()
         layout.columnCount = 2
         self.giftIdeasCollectionView.setCollectionViewLayout(layout, animated: true)
+        self.giftIdeasCollectionView.registerNib(UINib(nibName: Constants.CellIdentifiers.GiftIdeaCell, bundle: nil), forCellWithReuseIdentifier: Constants.CellIdentifiers.GiftIdeaCell)
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -42,7 +43,7 @@ class GiftIdeasViewController: HideNavBarViewController, UICollectionViewDataSou
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("GiftIdeaCell", forIndexPath: indexPath) as! GiftIdeaCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Constants.CellIdentifiers.GiftIdeaCell, forIndexPath: indexPath) as! GiftIdeaCell
         let idea = self.datasource[indexPath.row]
         cell.idea = idea
         return cell

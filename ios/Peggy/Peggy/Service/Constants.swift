@@ -15,4 +15,8 @@ class Constants {
         static let TopMargin = 20
     }
     
+    class CellIdentifiers {
+        static let GiftIdeaCell = "GiftIdeaCell"
+    }
+    
 }
