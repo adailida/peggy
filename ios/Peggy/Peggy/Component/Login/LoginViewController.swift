@@ -23,11 +23,19 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // read_custom_friendlists
         
-        self.loginWithFBButton.readPermissions = ["email","user_friends"]
+        self.loginWithFBButton.readPermissions = [
+            "user_friends",
+            "public_profile",
+            "user_relationships",
+            "read_custom_friendlists"
+        ]
     }
     
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
+        FacebookService.loginResult = result
+        FacebookService.importFriends()
     }
     
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
