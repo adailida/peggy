@@ -7,11 +7,8 @@
 //
 
 import UIKit
-import FBSDKLoginKit
 
-class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
-    
-    @IBOutlet weak var loginWithFBButton: FBSDKLoginButton!
+class LoginViewController: UIViewController {
     
     init() {
         super.init(nibName: "LoginView", bundle: nil)
@@ -25,20 +22,6 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         super.viewDidLoad()
         // read_custom_friendlists
         
-        self.loginWithFBButton.readPermissions = [
-            "user_friends",
-            "public_profile",
-            "user_relationships",
-            "read_custom_friendlists"
-        ]
-    }
-    
-    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
-        FacebookService.loginResult = result
-        FacebookService.importFriends()
-    }
-    
-    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
     }
 
     @IBAction func loginWithFacebook(sender: AnyObject) {

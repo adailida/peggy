@@ -7,7 +7,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Peggy">
             <connections>
-                <outlet property="loginWithFBButton" destination="m4U-de-2Vh" id="AM6-sH-eaE"/>
                 <outlet property="view" destination="iN0-l3-epB" id="ONP-QH-kS5"/>
             </connections>
         </placeholder>
@@ -24,17 +23,6 @@ Never forget to get a gift again</string>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m4U-de-2Vh" userLabel="Login With Facebook Container" customClass="FBSDKLoginButton">
-                    <rect key="frame" x="225" y="265" width="150" height="40"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="150" id="0et-gq-gbA"/>
-                        <constraint firstAttribute="height" constant="40" id="CO5-dd-mWh"/>
-                    </constraints>
-                    <connections>
-                        <outlet property="delegate" destination="-1" id="Aen-Pp-3Xe"/>
-                    </connections>
-                </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPU-qJ-xvF">
                     <rect key="frame" x="201" y="317" width="199" height="30"/>
                     <state key="normal" title="Use Peggy without signing in"/>
@@ -45,22 +33,12 @@ Never forget to get a gift again</string>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="DPU-qJ-xvF" firstAttribute="top" secondItem="m4U-de-2Vh" secondAttribute="bottom" constant="12" id="EaG-xv-gXm"/>
                 <constraint firstItem="DPU-qJ-xvF" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="G57-zx-3gg"/>
                 <constraint firstItem="82E-pP-dMu" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Pas-sC-MF7"/>
-                <constraint firstItem="m4U-de-2Vh" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Pjl-He-t0n"/>
-                <constraint firstItem="m4U-de-2Vh" firstAttribute="top" secondItem="82E-pP-dMu" secondAttribute="bottom" constant="70" id="TDP-qV-4a4"/>
                 <constraint firstItem="82E-pP-dMu" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="154" id="Yxm-bh-iwC"/>
+                <constraint firstItem="DPU-qJ-xvF" firstAttribute="top" secondItem="82E-pP-dMu" secondAttribute="bottom" constant="122" id="nw3-iQ-t1J"/>
                 <constraint firstItem="82E-pP-dMu" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="obU-4D-NEr"/>
-                <constraint firstItem="m4U-de-2Vh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="uqa-dG-ODx"/>
-                <constraint firstAttribute="trailing" secondItem="m4U-de-2Vh" secondAttribute="trailing" id="yjS-61-Wh2"/>
             </constraints>
-            <variation key="default">
-                <mask key="constraints">
-                    <exclude reference="uqa-dG-ODx"/>
-                    <exclude reference="yjS-61-Wh2"/>
-                </mask>
-            </variation>
         </view>
     </objects>
 </document>

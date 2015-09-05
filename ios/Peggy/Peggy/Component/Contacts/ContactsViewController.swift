@@ -14,9 +14,7 @@ class ContactsViewController: HideNavBarViewController, UITableViewDataSource, U
     
     private let dateFormatter = NSDateFormatter()
     
-    private var datasource = [
-        Contact(name: "Alex", surname: "D", dob: NSDate.parse("1900-01-01")),
-        Contact(name: "Alisher", surname: "S", dob: NSDate.parse("1900-01-01"))
+    private var datasource: [Contact] = [
     ]
 
     override func viewDidLoad() {
@@ -24,7 +22,8 @@ class ContactsViewController: HideNavBarViewController, UITableViewDataSource, U
         self.contactsTableView.dataSource = self
         self.contactsTableView.delegate = self
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.datasource = ContactsWizard.getImportantContacts()
     }
 
     override func didReceiveMemoryWarning() {

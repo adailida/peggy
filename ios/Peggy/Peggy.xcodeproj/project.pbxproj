@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C1285E81B96BB8E009DFE78 /* FacebookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1285E71B96BB8E009DFE78 /* FacebookService.swift */; };
+		0C1285E81B96BB8E009DFE78 /* ContactsWizard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1285E71B96BB8E009DFE78 /* ContactsWizard.swift */; };
 		0C50E8DE1B8ED10400DD2CEB /* GiftIdeasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C50E8DD1B8ED10400DD2CEB /* GiftIdeasViewController.swift */; };
 		0C50E8E01B8ED23B00DD2CEB /* GiftIdea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C50E8DF1B8ED23B00DD2CEB /* GiftIdea.swift */; };
 		0C50E8E21B8ED39300DD2CEB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C50E8E11B8ED39300DD2CEB /* Constants.swift */; };
@@ -44,7 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C1285E71B96BB8E009DFE78 /* FacebookService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookService.swift; sourceTree = "<group>"; };
+		0C1285E71B96BB8E009DFE78 /* ContactsWizard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsWizard.swift; sourceTree = "<group>"; };
 		0C50E8DD1B8ED10400DD2CEB /* GiftIdeasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftIdeasViewController.swift; sourceTree = "<group>"; };
 		0C50E8DF1B8ED23B00DD2CEB /* GiftIdea.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiftIdea.swift; sourceTree = "<group>"; };
 		0C50E8E11B8ED39300DD2CEB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -222,7 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				0C50E8E11B8ED39300DD2CEB /* Constants.swift */,
-				0C1285E71B96BB8E009DFE78 /* FacebookService.swift */,
+				0C1285E71B96BB8E009DFE78 /* ContactsWizard.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -420,7 +420,7 @@
 				0C50E8E41B8ED8F100DD2CEB /* ContactDetailsViewController.swift in Sources */,
 				0CBD950D1B8C372F009CA68E /* DateExtension.swift in Sources */,
 				0CB6EA5F1B88FBCD002F514F /* AppDelegate.swift in Sources */,
-				0C1285E81B96BB8E009DFE78 /* FacebookService.swift in Sources */,
+				0C1285E81B96BB8E009DFE78 /* ContactsWizard.swift in Sources */,
 				0CB6EAB91B89ABE8002F514F /* DashboardViewController.swift in Sources */,
 				0C6365441B91930300DBFDCF /* EventDetailsViewController.swift in Sources */,
 				0C50E8E81B8ED99B00DD2CEB /* ContactTableCell.swift in Sources */,
@@ -569,6 +569,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = Peggy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = gift.assistant.peggy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -589,6 +590,7 @@
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
 				);
 				INFOPLIST_FILE = Peggy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = gift.assistant.peggy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
