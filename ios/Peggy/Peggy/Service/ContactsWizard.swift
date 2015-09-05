@@ -6,6 +6,7 @@
 //  Copyright © 2015 Alex D. All rights reserved.
 //
 import Contacts
+import XCGLogger
 
 class ContactsWizard {
     
@@ -27,6 +28,7 @@ class ContactsWizard {
                     result.append(Contact(name: contact.givenName, surname: contact.familyName, dob: contact.birthday?.date))
             }
         } catch {
+            Logger.error("Unable to fetch phone contacts")
         }
         return result
     }
